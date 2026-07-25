@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Space Grotesk", "Inter", sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --color-paper: #f5f6f3;
+  --color-paper-line: #dde1d8;
+  --color-ink: #14181c;
+  --color-ink-soft: #454d4f;
+  --color-blueprint: #1e4fd8;
+  --color-blueprint-soft: #e7edfc;
+  --color-signal: #ff5a1f;
+  --color-status-new: #1e4fd8;
+  --color-status-new-bg: #e7edfc;
+  --color-status-contacted: #b4790a;
+  --color-status-contacted-bg: #fbf0dc;
+  --color-status-closed: #157a4d;
+  --color-status-closed-bg: #e2f5eb;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html {
+  background-color: var(--color-paper);
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-ink);
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(to right, var(--color-paper-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--color-paper-line) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
